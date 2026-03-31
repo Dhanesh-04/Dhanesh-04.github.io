@@ -18,20 +18,9 @@ body {
 nav {
   position: fixed;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 50px;
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(10px);
-  z-index: 1000;
-}
-
-nav h2 { margin: 0; }
-
-nav a {
-  color: #aaa;
-  margin-left: 20px;
-  text-decoration: none;
+  padding: 15px;
+  text-align: center;
+  background: rgba(0,0,0,0.7);
 }
 
 /* HERO */
@@ -40,11 +29,12 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 50px;
+  align-items: center;
+  text-align: center;
 }
 
-header h1 {
-  font-size: 60px;
+h1 {
+  font-size: 55px;
 }
 
 header p {
@@ -59,26 +49,25 @@ header p {
   border: 1px solid #fff;
   color: white;
   text-decoration: none;
-  width: fit-content;
 }
 
 /* SECTION */
 .section {
-  padding: 100px 50px;
-}
-
-.section h2 {
-  margin-bottom: 30px;
+  padding: 100px 20px;
+  text-align: center;
 }
 
 /* CARDS */
 .cards {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .card {
-  width: 250px;
+  width: 220px;
   margin: 15px;
   padding: 20px;
   border: 1px solid #222;
@@ -96,14 +85,6 @@ header p {
   text-decoration: none;
 }
 
-/* FEATURE BOX */
-.feature {
-  background: #111;
-  padding: 40px;
-  border-radius: 15px;
-  margin-top: 20px;
-}
-
 /* FOOTER */
 footer {
   text-align: center;
@@ -117,65 +98,57 @@ footer {
 <body>
 
 <nav>
-<h2>Dhanesh AI</h2>
-<div>
-<a href="#">Home</a>
-<a href="#tools">Tools</a>
-<a href="#learn">Learn</a>
-<a href="#roadmap">Roadmap</a>
-<a href="#contact">Contact</a>
-</div>
+AI Hub by Dhanesh
 </nav>
 
 <header>
 <h1>Learn AI & Build Your Future</h1>
-<p>Simple AI learning platform for students and beginners. Learn tools, build skills, grow fast.</p>
+<p>Simple AI learning platform for students and beginners.</p>
 <a href="#tools" class="btn">Explore Tools</a>
 </header>
 
 <div class="section">
 <h2>🔥 Why This Platform?</h2>
-<div class="feature">
-<p>This platform is designed to help beginners learn AI fast using practical tools and simple guidance.</p>
-</div>
+<p>Learn AI fast using practical tools and simple guidance.</p>
 </div>
 
 <div class="section" id="tools">
 <h2>⚡ Top 10 AI Tools</h2>
 
 <div class="cards">
-<div class="card"><a href="https://chat.openai.com">ChatGPT</a><p>AI assistant</p></div>
-<div class="card"><a href="https://claude.ai">Claude</a><p>Writing AI</p></div>
-<div class="card"><a href="https://perplexity.ai">Perplexity</a><p>AI search</p></div>
-<div class="card"><a href="https://canva.com">Canva AI</a><p>Design</p></div>
-<div class="card"><a href="https://gamma.app">Gamma</a><p>Presentations</p></div>
-<div class="card"><a href="https://runwayml.com">Runway</a><p>Video AI</p></div>
-<div class="card"><a href="https://pictory.ai">Pictory</a><p>Video creation</p></div>
-<div class="card"><a href="https://notion.so">Notion AI</a><p>Productivity</p></div>
-<div class="card"><a href="https://tome.app">Tome</a><p>Story AI</p></div>
-<div class="card"><a href="https://soundraw.io">Soundraw</a><p>Music AI</p></div>
-</div>
+
+<div class="card"><a href="https://chat.openai.com">ChatGPT</a></div>
+<div class="card"><a href="https://claude.ai">Claude</a></div>
+<div class="card"><a href="https://perplexity.ai">Perplexity</a></div>
+<div class="card"><a href="https://canva.com">Canva</a></div>
+<div class="card"><a href="https://gamma.app">Gamma</a></div>
+<div class="card"><a href="https://runwayml.com">Runway</a></div>
+<div class="card"><a href="https://pictory.ai">Pictory</a></div>
+<div class="card"><a href="https://notion.so">Notion</a></div>
+<div class="card"><a href="https://tome.app">Tome</a></div>
+<div class="card"><a href="https://soundraw.io">Soundraw</a></div>
 
 </div>
-
-<div class="section" id="learn">
-<h2>📘 Learn AI Fast</h2>
-<p>Understand basics → Use tools → Build projects → Share work → Grow audience</p>
 </div>
 
-<div class="section" id="roadmap">
+<div class="section">
+<h2>📘 Learn AI</h2>
+<p>Basics → Tools → Projects → Growth</p>
+</div>
+
+<div class="section">
 <h2>📈 Roadmap</h2>
 
 <div class="cards">
-<div class="card">Step 1: Learn AI basics</div>
-<div class="card">Step 2: Practice daily tools</div>
-<div class="card">Step 3: Build projects</div>
-<div class="card">Step 4: Share on Instagram</div>
+<div class="card">Learn Basics</div>
+<div class="card">Use Tools</div>
+<div class="card">Build Projects</div>
+<div class="card">Share Online</div>
 </div>
 
 </div>
 
-<div class="section" id="contact">
+<div class="section">
 <h2>📩 Contact</h2>
 <p>Email: your@email.com</p>
 <p><a href="https://instagram.com/_dhanesh04.unfiltered">Instagram</a></p>
