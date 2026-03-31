@@ -8,121 +8,106 @@
 <style>
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  color: #eaeaea;
-  background: radial-gradient(circle at top, #111 0%, #000 80%);
-  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  color: white;
+  background: linear-gradient(270deg, #000, #111, #000);
+  background-size: 600% 600%;
+  animation: bgMove 15s ease infinite;
 }
 
-/* Glow background */
-body::before, body::after {
-  content: "";
+@keyframes bgMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* NAVBAR */
+nav {
   position: fixed;
-  width: 600px;
-  height: 600px;
-  border-radius: 50%;
-  filter: blur(120px);
+  width: 100%;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
 }
-body::before {
-  background: rgba(255,255,255,0.04);
-  top: -200px;
-  left: -200px;
+
+nav h2 {
+  margin: 0;
 }
-body::after {
-  background: rgba(255,255,255,0.02);
-  bottom: -200px;
-  right: -200px;
+
+nav a {
+  color: #aaa;
+  margin-left: 20px;
+  text-decoration: none;
 }
 
 /* HERO */
-header {
-  height: 100vh;
+.hero {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 120px 10%;
+  height: 100vh;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 60px;
+}
+
+.hero-text p {
+  color: #aaa;
+  margin-top: 10px;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.hero-box {
+  width: 350px;
+  height: 350px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
+  display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-}
-
-h1 {
-  font-size: 70px;
-}
-
-#typing {
-  margin-top: 10px;
-  color: #aaa;
-  font-size: 18px;
-}
-
-.scroll {
-  position: absolute;
-  bottom: 30px;
-  color: #666;
-  animation: bounce 1.5s infinite;
-}
-
-@keyframes bounce {
-  0%,100%{transform:translateY(0);}
-  50%{transform:translateY(10px);}
+  font-size: 20px;
 }
 
 /* SECTION */
 .section {
-  padding: 110px 20px;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 1s;
-}
-.section.show {
-  opacity: 1;
-  transform: translateY(0);
+  padding: 100px 10%;
 }
 
-/* CARDS */
 .cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 .card {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.08);
-  backdrop-filter: blur(10px);
+  width: 250px;
   margin: 15px;
-  padding: 25px;
-  border-radius: 12px;
-  width: 260px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 20px rgba(255,255,255,0.05);
-}
-
-/* BUTTON */
-.btn {
-  margin-top: 20px;
-  padding: 12px 30px;
-  border: 1px solid #aaa;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: white;
-  color: black;
+  padding: 20px;
+  border: 1px solid #222;
+  border-radius: 10px;
 }
 
 /* FOOTER */
 footer {
-  padding: 40px;
   text-align: center;
-  color: #555;
+  padding: 40px;
+  color: #777;
 }
 </style>
 
@@ -130,141 +115,71 @@ footer {
 
 <body>
 
-<header>
-<h1>Dhanesh</h1>
-<p id="typing"></p>
-<div class="scroll">scroll ↓</div>
-</header>
+<nav>
+<h2>Dhanesh</h2>
+<div>
+<a href="#">Home</a>
+<a href="#tools">Tools</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
 
-<div class="section">
-<h2>Who I Am</h2>
-<p>I’m building AI skills early to create a powerful future.</p>
+<div class="hero">
+<div class="hero-text">
+<h1>Build Your Future With AI</h1>
+<p>I’m Dhanesh, learning AI early and building real skills.</p>
+<a href="#tools" class="btn">Explore Tools</a>
+</div>
+
+<div class="hero-box">
+AI Builder ⚡
+</div>
 </div>
 
 <div class="section">
 <h2>What I Do</h2>
 
 <div class="cards">
-<div class="card"><p>Learn AI daily</p></div>
-<div class="card"><p>Build digital skills</p></div>
-<div class="card"><p>Document growth</p></div>
+<div class="card">Learn AI</div>
+<div class="card">Build Skills</div>
+<div class="card">Grow Daily</div>
 </div>
 
 </div>
 
-<div class="section">
+<div class="section" id="tools">
 <h2>AI Tools</h2>
 
 <div class="cards">
-
-<div class="card">
-<h3><a href="https://chat.openai.com" target="_blank">ChatGPT</a></h3>
-<p>Learning & thinking</p>
-</div>
-
-<div class="card">
-<h3><a href="https://www.canva.com" target="_blank">Canva</a></h3>
-<p>Design & content</p>
-</div>
-
-<div class="card">
-<h3><a href="https://www.notion.so" target="_blank">Notion</a></h3>
-<p>Planning & execution</p>
+<div class="card"><a href="https://chat.openai.com">ChatGPT</a></div>
+<div class="card"><a href="https://canva.com">Canva</a></div>
+<div class="card"><a href="https://notion.so">Notion</a></div>
 </div>
 
 </div>
 
-</div>
-
-<!-- REPORT SECTION -->
 <div class="section">
-<h2>📊 Platform Strategy</h2>
+<h2>Strategy</h2>
 
 <div class="cards">
-
-<div class="card">
-<h3>🎯 Goal</h3>
-<p>Build a high-value AI platform that helps students learn fast and grow.</p>
-</div>
-
-<div class="card">
-<h3>👥 Audience</h3>
-<p>Students, beginners, and creators interested in AI.</p>
-</div>
-
-<div class="card">
-<h3>⚡ Focus</h3>
-<p>Simple learning, real tools, and practical growth.</p>
-</div>
-
-<div class="card">
-<h3>🚀 Vision</h3>
-<p>Make AI easy, accessible, and powerful for everyone.</p>
-</div>
-
-</div>
-</div>
-
-<div class="section">
-<h2>🔥 What This Platform Offers</h2>
-
-<div class="cards">
-
-<div class="card"><p>AI tools that save time</p></div>
-<div class="card"><p>No-code beginner learning</p></div>
-<div class="card"><p>Real growth systems</p></div>
-<div class="card"><p>Simple clean experience</p></div>
-
-</div>
-</div>
-
-<div class="section">
-<h2>My System</h2>
-
-<div class="cards">
-<div class="card"><p>Learn Fast</p></div>
-<div class="card"><p>Take Action</p></div>
-<div class="card"><p>Stay Consistent</p></div>
+<div class="card">AI Learning Platform</div>
+<div class="card">Beginner Friendly</div>
+<div class="card">High Growth Focus</div>
 </div>
 
 </div>
 
-<div class="section">
+<div class="section" id="contact">
 <h2>Connect</h2>
 
 <a href="https://instagram.com/_dhanesh04.unfiltered" class="btn">Instagram</a>
-
-<p style="margin-top:25px;">Email: your@email.com</p>
+<p>Email: your@email.com</p>
 
 </div>
 
 <footer>
 © 2026 Dhanesh
 </footer>
-
-<script>
-// Typing effect
-const text = "16 • AI • Discipline • Growth";
-let i = 0;
-function typing() {
-  if (i < text.length) {
-    document.getElementById("typing").innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typing, 40);
-  }
-}
-typing();
-
-// Scroll animation
-const sections = document.querySelectorAll('.section');
-window.addEventListener('scroll', () => {
-  sections.forEach(sec => {
-    if (sec.getBoundingClientRect().top < window.innerHeight - 100) {
-      sec.classList.add('show');
-    }
-  });
-});
-</script>
 
 </body>
 </html>
