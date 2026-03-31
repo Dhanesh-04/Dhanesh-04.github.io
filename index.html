@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dhanesh | AI Tools & Prompt Engineer</title>
+    
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/8637/8637284.png" type="image/png">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
-                        dark: '#0f172a',
-                        darker: '#020617',
                         primary: '#10b981', 
                         accent: '#3b82f6'
                     }
@@ -21,10 +23,16 @@
             }
         }
     </script>
+
     <style>
+        /* Adaptive Glassmorphism for Light/Dark Mode */
         .glass {
-            background: rgba(30, 41, 59, 0.7);
+            background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .dark .glass {
+            background: rgba(30, 41, 59, 0.7);
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
         html { scroll-behavior: smooth; }
@@ -33,133 +41,239 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        /* Code Block Styling */
+        .mock-code {
+            font-family: 'Courier New', Courier, monospace;
+            background: #0f172a;
+            color: #10b981;
+        }
     </style>
 </head>
-<body class="bg-darker text-gray-200 font-sans antialiased selection:bg-primary selection:text-white">
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-gray-200 font-sans antialiased transition-colors duration-300 selection:bg-primary selection:text-white">
 
-    <nav class="fixed w-full z-50 glass top-0">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="fixed w-full z-50 glass top-0 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex-shrink-0 font-bold text-xl tracking-wider">
                     DHANESH<span class="text-primary">.</span>
                 </div>
-                <div class="flex space-x-6">
-                    <a href="#about" class="hover:text-primary transition-colors text-sm font-medium">About</a>
-                    <a href="#skills" class="hover:text-primary transition-colors text-sm font-medium">Skills</a>
-                    <a href="#projects" class="hover:text-primary transition-colors text-sm font-medium">Projects</a>
+                <div class="flex items-center space-x-6">
+                    <a href="#about" class="hover:text-primary transition-colors text-sm font-medium hidden sm:block">Focus</a>
+                    <a href="#showcase" class="hover:text-primary transition-colors text-sm font-medium hidden sm:block">Showcase</a>
+                    <a href="#tools" class="hover:text-primary transition-colors text-sm font-medium hidden sm:block">AI Arsenal</a>
+                    <button id="themeToggle" class="p-2 rounded-full glass hover:text-primary transition-colors focus:outline-none" aria-label="Toggle Theme">
+                        <i class="fa-solid fa-moon text-lg dark:hidden"></i>
+                        <i class="fa-solid fa-sun text-lg hidden dark:block"></i>
+                    </button>
                 </div>
             </div>
         </div>
     </nav>
 
-    <main class="mt-24 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 flex flex-col items-center text-center">
-        <div class="w-32 h-32 bg-gray-800 rounded-full mb-8 flex items-center justify-center border-4 border-gray-700 shadow-xl overflow-hidden">
-            <i class="fa-solid fa-microchip text-5xl text-gray-400"></i>
+    <main class="mt-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-20 flex flex-col items-center text-center relative z-10">
+        <div class="w-32 h-32 bg-slate-200 dark:bg-slate-800 rounded-full mb-8 flex items-center justify-center border-4 border-slate-300 dark:border-slate-700 shadow-xl overflow-hidden transition-colors duration-300">
+            <i class="fa-solid fa-microchip text-5xl text-slate-500 dark:text-slate-400"></i>
         </div>
-        <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-4">
+        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-4">
             Hi, I'm <span class="gradient-text">Dhanesh</span>
         </h1>
-        <p class="text-xl text-gray-400 max-w-2xl mb-2 font-medium">
+        <p class="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mb-2 font-medium">
             AI Tools & Prompt Engineer
         </p>
-        <p class="text-md text-gray-500 mb-10 flex items-center justify-center gap-2">
+        <p class="text-md text-slate-500 mb-10 flex items-center justify-center gap-2">
             <i class="fa-solid fa-location-dot"></i> Based in Goa, India
         </p>
         <div class="flex flex-wrap justify-center gap-4">
-            <a href="mailto:your@email.com" class="bg-primary hover:bg-emerald-600 text-white px-6 py-3 rounded-lg font-medium transition-colors shadow-lg shadow-primary/20 flex items-center gap-2">
-                <i class="fa-solid fa-envelope"></i> Email Me
+            <a href="mailto:padkardhanesh@gmail.com" class="bg-primary hover:bg-emerald-600 text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg shadow-primary/30 flex items-center gap-2 hover:-translate-y-1">
+                <i class="fa-solid fa-envelope"></i> Let's Collaborate
             </a>
-            <a href="https://instagram.com/_dhanesh04.unfiltered" target="_blank" class="glass hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-medium transition-colors flex items-center gap-2 border border-gray-700">
-                <i class="fa-brands fa-instagram text-pink-500"></i> DM on Instagram
+            <a href="https://instagram.com/_dhanesh04.unfiltered" target="_blank" class="glass hover:bg-slate-200 dark:hover:bg-slate-800 text-slate-800 dark:text-white px-8 py-4 rounded-xl font-bold transition-all flex items-center gap-2 border border-slate-300 dark:border-slate-700 hover:-translate-y-1">
+                <i class="fa-brands fa-instagram text-pink-500 text-xl"></i> DM on Instagram
             </a>
         </div>
     </main>
 
-    <section id="about" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h2 class="text-2xl font-bold mb-8 border-b border-gray-800 pb-4">My Focus</h2>
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <p class="text-gray-400 leading-relaxed mb-6">
-                    I specialize in <strong class="text-gray-200">AI Tools and Prompt Engineering</strong>. My work revolves around unlocking the full potential of Large Language Models (LLMs) and generative AI to solve complex problems, automate workflows, and create high-leverage digital assets. It isn't just about casually using AI; it's about engineering the precise parameters, contexts, and systemic instructions that make AI outputs reliable, scalable, and highly accurate.
-                </p>
-                <p class="text-gray-400 leading-relaxed">
-                    Whether I am evaluating the latest neural network architectures or fine-tuning complex prompts for edge cases, I approach the work with strict discipline. I apply the exact same mindset to my tech career as I do to my physical training in calisthenics—building immense strength and capability by mastering the foundational mechanics from the ground up.
-                </p>
-            </div>
-            
-            <div class="glass p-6 rounded-2xl">
-                <h3 class="font-bold text-lg mb-4 text-white"><i class="fa-solid fa-award text-primary mr-2"></i> Certifications & Training</h3>
-                <ul class="space-y-4">
-                    <li class="flex items-start">
-                        <div class="bg-gray-800 p-2 rounded text-primary mr-4 mt-1">
+    <div class="w-full overflow-hidden leading-none text-slate-200 dark:text-slate-900 transition-colors duration-300">
+        <svg class="relative block w-full h-[100px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118,130.98,131.2,201.39,115.44,242.34,106.27,281.87,83.56,321.39,56.44Z" fill="currentColor"></path>
+        </svg>
+    </div>
+
+    <section id="about" class="bg-slate-200 dark:bg-slate-900 py-16 transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">The Engineering Mindset</h2>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+                        I specialize in unlocking the actual power of Large Language Models. Most people talk to AI like a search engine; I engineer systemic instructions, contexts, and parameters to force AI to output high-leverage, reliable code and workflows.
+                    </p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                        My approach to tech is deeply rooted in discipline. Whether I'm analyzing a complex Outskill AI curriculum or training in calisthenics, the philosophy is the same: master the foundational mechanics, build strength from the ground up, and execute with precision.
+                    </p>
+                </div>
+                <div class="glass p-8 rounded-2xl shadow-lg">
+                    <h3 class="font-bold text-xl mb-6 flex items-center"><i class="fa-solid fa-award text-primary mr-3 text-2xl"></i> Milestones</h3>
+                    <div class="flex items-start mb-4">
+                        <div class="bg-primary/20 p-3 rounded-lg text-primary mr-4">
                             <i class="fa-solid fa-certificate"></i>
                         </div>
                         <div>
-                            <h4 class="font-semibold text-gray-200">AI Certification</h4>
-                            <p class="text-sm text-gray-500">Completed intensive AI training curriculum via Outskill.</p>
+                            <h4 class="font-bold text-lg">Outskill Certified</h4>
+                            <p class="text-sm text-slate-500 dark:text-slate-400">Completed intensive curriculum on AI implementation and theory.</p>
                         </div>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="bg-gray-900 py-16 mt-8 border-y border-gray-800">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl font-bold mb-8 text-center">Core Competencies</h2>
-            <div class="flex flex-wrap justify-center gap-4">
-                <span class="px-4 py-2 bg-primary/10 text-primary border border-primary/30 rounded-full text-sm font-bold shadow-[0_0_15px_rgba(16,185,129,0.2)] cursor-default"><i class="fa-solid fa-terminal mr-2"></i> Advanced Prompt Engineering</span>
-                <span class="px-4 py-2 glass rounded-full text-sm font-medium text-gray-300 border border-gray-700 hover:border-primary transition-colors cursor-default"><i class="fa-solid fa-layer-group mr-2"></i> AI Workflow Automation</span>
-                <span class="px-4 py-2 glass rounded-full text-sm font-medium text-gray-300 border border-gray-700 hover:border-primary transition-colors cursor-default"><i class="fa-solid fa-microchip mr-2"></i> LLM Optimization</span>
-                <span class="px-4 py-2 glass rounded-full text-sm font-medium text-gray-300 border border-gray-700 hover:border-primary transition-colors cursor-default"><i class="fa-brands fa-js mr-2"></i> JavaScript & Web Tech</span>
+    <section id="showcase" class="py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-extrabold mb-4">Prompt <span class="gradient-text">Architecture</span></h2>
+            <p class="text-slate-500 text-lg max-w-2xl mx-auto">The difference between a casual user and an engineer is the prompt. See how structuring inputs changes the output.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-8 items-stretch">
+            <div class="glass p-6 rounded-2xl border border-red-500/30 flex flex-col">
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                    <span class="text-sm font-bold text-slate-500 tracking-wider uppercase">The Casual Prompt</span>
+                </div>
+                <div class="mock-code p-4 rounded-lg text-sm mb-4 opacity-70">
+                    "Write a Python script to scrape a website."
+                </div>
+                <div class="mt-auto pt-4 border-t border-slate-200 dark:border-slate-800">
+                    <p class="text-sm text-slate-500"><i class="fa-solid fa-triangle-exclamation text-red-400 mr-2"></i> Result: Generic code, no error handling, easily broken by anti-bot measures, requires hours of debugging.</p>
+                </div>
+            </div>
+
+            <div class="glass p-6 rounded-2xl border border-primary flex flex-col shadow-[0_0_30px_rgba(16,185,129,0.1)] relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-3 py-1 rounded-bl-lg">PRO</div>
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="w-3 h-3 rounded-full bg-primary animate-pulse"></div>
+                    <span class="text-sm font-bold text-slate-900 dark:text-white tracking-wider uppercase">The Engineered Prompt</span>
+                </div>
+                <div class="mock-code p-4 rounded-lg text-sm mb-4 leading-relaxed">
+                    "Act as a Senior Data Engineer. Develop a Python-based web scraper using BeautifulSoup and Requests. <br><br>
+                    Constraints:<br>
+                    1. Implement exponential backoff for rate limiting.<br>
+                    2. Rotate User-Agents dynamically.<br>
+                    3. Output the extracted data strictly as a validated JSON object.<br>
+                    4. Include try/except blocks for HTTP 403 and 500 errors."
+                </div>
+                <div class="mt-auto pt-4 border-t border-slate-200 dark:border-slate-800">
+                    <p class="text-sm text-slate-600 dark:text-slate-300 font-medium"><i class="fa-solid fa-check-circle text-primary mr-2"></i> Result: Production-ready, resilient architecture delivered instantly.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <h2 class="text-2xl font-bold mb-8 border-b border-gray-800 pb-4">Engineering Projects</h2>
-        <div class="grid md:grid-cols-2 gap-8">
-            
-            <div class="glass rounded-xl overflow-hidden group hover:border-primary transition-all duration-300">
-                <div class="h-48 bg-gray-800 flex items-center justify-center relative overflow-hidden">
-                    <i class="fa-solid fa-book-journal-whills text-5xl text-gray-600 group-hover:scale-110 transition-transform duration-500"></i>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2">Master Prompt Architecture</h3>
-                    <p class="text-gray-400 mb-4 text-sm">A repository of high-leverage prompt templates designed to bypass standard LLM guardrails for enhanced logical reasoning and coding generation.</p>
-                    <a href="#" class="text-primary font-medium hover:text-white transition-colors text-sm">View Work <i class="fa-solid fa-arrow-right ml-1"></i></a>
-                </div>
+    <div class="w-full overflow-hidden leading-none text-slate-900 transition-colors duration-300">
+        <svg class="relative block w-full h-[70px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118,130.98,131.2,201.39,115.44,242.34,106.27,281.87,83.56,321.39,56.44Z" fill="currentColor"></path>
+        </svg>
+    </div>
+
+    <section id="tools" class="bg-slate-900 text-white py-20 transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold mb-4">The AI <span class="gradient-text">Arsenal</span></h2>
+                <p class="text-slate-400 text-lg max-w-2xl mx-auto">Stop doing manual work that a machine can do in seconds. These are the tools I use to scale my output. Start building.</p>
             </div>
 
-            <div class="glass rounded-xl overflow-hidden group hover:border-primary transition-all duration-300 border-dashed border-2 border-gray-700">
-                <div class="h-48 bg-gray-900/50 flex items-center justify-center">
-                    <p class="text-gray-500 font-medium"><i class="fa-solid fa-gears mr-2"></i> Currently Building...</p>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2 text-gray-500">Automated Agent Workflows</h3>
-                    <p class="text-gray-600 mb-4 text-sm">Designing chained AI systems where specialized prompts pass context to one another to complete multi-step software tasks.</p>
-                </div>
-            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <a href="https://chat.openai.com" target="_blank" class="bg-slate-800 p-6 rounded-2xl hover:-translate-y-2 transition-transform duration-300 border border-slate-700 hover:border-primary group">
+                    <div class="w-12 h-12 bg-slate-700 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary transition-colors">
+                        <i class="fa-solid fa-robot text-2xl text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">ChatGPT (GPT-4)</h3>
+                    <p class="text-slate-400 text-sm mb-4">The ultimate reasoning engine. Use it to brainstorm logic, debug errors, and structure your workflow.</p>
+                    <span class="text-primary text-sm font-bold">Start Prompting &rarr;</span>
+                </a>
 
+                <a href="https://claude.ai" target="_blank" class="bg-slate-800 p-6 rounded-2xl hover:-translate-y-2 transition-transform duration-300 border border-slate-700 hover:border-accent group">
+                    <div class="w-12 h-12 bg-slate-700 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent transition-colors">
+                        <i class="fa-solid fa-brain text-2xl text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Claude 3</h3>
+                    <p class="text-slate-400 text-sm mb-4">The writer and coder's best friend. Massive context window for reading entire codebases or books at once.</p>
+                    <span class="text-accent text-sm font-bold">Analyze Data &rarr;</span>
+                </a>
+
+                <a href="https://cursor.sh" target="_blank" class="bg-slate-800 p-6 rounded-2xl hover:-translate-y-2 transition-transform duration-300 border border-slate-700 hover:border-emerald-400 group">
+                    <div class="w-12 h-12 bg-slate-700 rounded-lg flex items-center justify-center mb-4 group-hover:bg-emerald-400 transition-colors">
+                        <i class="fa-solid fa-code text-2xl text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Cursor</h3>
+                    <p class="text-slate-400 text-sm mb-4">An AI-first code editor. Don't just write code; co-pilot your architecture in real-time.</p>
+                    <span class="text-emerald-400 text-sm font-bold">Build Software &rarr;</span>
+                </a>
+
+                <a href="https://midjourney.com" target="_blank" class="bg-slate-800 p-6 rounded-2xl hover:-translate-y-2 transition-transform duration-300 border border-slate-700 hover:border-purple-500 group">
+                    <div class="w-12 h-12 bg-slate-700 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-500 transition-colors">
+                        <i class="fa-solid fa-palette text-2xl text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Midjourney</h3>
+                    <p class="text-slate-400 text-sm mb-4">Turn text into hyper-realistic images. The absolute standard for generative design and UI mockups.</p>
+                    <span class="text-purple-500 text-sm font-bold">Generate Art &rarr;</span>
+                </a>
+
+                <a href="https://perplexity.ai" target="_blank" class="bg-slate-800 p-6 rounded-2xl hover:-translate-y-2 transition-transform duration-300 border border-slate-700 hover:border-cyan-400 group">
+                    <div class="w-12 h-12 bg-slate-700 rounded-lg flex items-center justify-center mb-4 group-hover:bg-cyan-400 transition-colors">
+                        <i class="fa-solid fa-magnifying-glass text-2xl text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Perplexity</h3>
+                    <p class="text-slate-400 text-sm mb-4">An AI research assistant that cites its sources. Never manually search through 10 Google tabs again.</p>
+                    <span class="text-cyan-400 text-sm font-bold">Start Researching &rarr;</span>
+                </a>
+
+            </div>
         </div>
     </section>
 
-    <footer class="glass border-t border-gray-800 py-8 mt-12">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
-            <p class="text-gray-500 text-sm">© 2026 Dhanesh. All rights reserved.</p>
-            <div class="flex space-x-6 mt-4 md:mt-0">
-                <a href="mailto:your@email.com" class="text-gray-500 hover:text-white transition-colors" aria-label="Email">
+    <footer class="glass border-t border-slate-200 dark:border-slate-800 py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="text-center md:text-left mb-4 md:mb-0">
+                <p class="font-bold text-lg tracking-wider">DHANESH<span class="text-primary">.</span></p>
+                <p class="text-slate-500 text-sm mt-1">© 2026. Architected for the future.</p>
+            </div>
+            <div class="flex space-x-6">
+                <a href="mailto:padkardhanesh@gmail.com" class="text-slate-400 hover:text-primary transition-colors hover:scale-110 transform" aria-label="Email">
                     <i class="fa-solid fa-envelope text-2xl"></i>
                 </a>
-                <a href="https://instagram.com/_dhanesh04.unfiltered" target="_blank" class="text-gray-500 hover:text-pink-500 transition-colors" aria-label="Instagram">
+                <a href="https://instagram.com/_dhanesh04.unfiltered" target="_blank" class="text-slate-400 hover:text-pink-500 transition-colors hover:scale-110 transform" aria-label="Instagram">
                     <i class="fa-brands fa-instagram text-2xl"></i>
                 </a>
-                <a href="https://github.com/dhanesh-04" target="_blank" class="text-gray-500 hover:text-white transition-colors" aria-label="GitHub">
+                <a href="https://github.com/dhanesh-04" target="_blank" class="text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors hover:scale-110 transform" aria-label="GitHub">
                     <i class="fa-brands fa-github text-2xl"></i>
                 </a>
             </div>
         </div>
     </footer>
+
+    <script>
+        const themeToggleBtn = document.getElementById('themeToggle');
+        const htmlElement = document.documentElement;
+
+        // Check for saved theme preference in local storage
+        if (localStorage.getItem('theme') === 'light') {
+            htmlElement.classList.remove('dark');
+        } else {
+            htmlElement.classList.add('dark'); // Default to dark mode
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            htmlElement.classList.toggle('dark');
+            
+            // Save preference
+            if (htmlElement.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
 
 </body>
 </html>
