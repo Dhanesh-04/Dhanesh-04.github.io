@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dhanesh | AI Builder</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0d0d0d;
+  color: white;
+  scroll-behavior: smooth;
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  font-size: 60px;
+  background: linear-gradient(90deg, #00ffcc, #00aaff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeIn 1.5s ease;
+}
+
+.subtitle {
+  color: #aaa;
+  max-width: 500px;
+  animation: fadeIn 2s ease;
+}
+
+.section {
+  padding: 80px 20px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.8s;
+}
+
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: #1a1a1a;
+  margin: 15px;
+  padding: 20px;
+  border-radius: 12px;
+  width: 280px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  background: #222;
+}
+
+.highlight {
+  color: #00ffcc;
+}
+
+a {
+  color: #00ffcc;
+  text-decoration: none;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: linear-gradient(90deg, #00ffcc, #00aaff);
+  color: black;
+  border-radius: 8px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #777;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>Dhanesh ⚡</h1>
+<p class="subtitle">
+I’m 16. While others scroll, I’m learning <span class="highlight">AI</span> and building my future.
+</p>
+</header>
+
+<div class="section">
+<h2>⚡ My Mission</h2>
+<p>To master AI early and build a powerful future using discipline and technology.</p>
+</div>
+
+<div class="section">
+<h2>🔥 What I Do</h2>
+<div class="cards">
+<div class="card"><p>Learn AI daily</p></div>
+<div class="card"><p>Build digital skills</p></div>
+<div class="card"><p>Document my journey</p></div>
+</div>
+</div>
+
+<div class="section">
+<h2>🤖 AI Tools I Use</h2>
+<div class="cards">
+
+<div class="card">
+<h3><a href="https://chat.openai.com" target="_blank">ChatGPT</a></h3>
+<p>Learning & problem solving</p>
+</div>
+
+<div class="card">
+<h3><a href="https://www.canva.com" target="_blank">Canva AI</a></h3>
+<p>Design & content</p>
+</div>
+
+<div class="card">
+<h3><a href="https://www.notion.so" target="_blank">Notion AI</a></h3>
+<p>Planning & productivity</p>
+</div>
+
+<div class="card">
+<h3><a href="https://gamma.app" target="_blank">Gamma AI</a></h3>
+<p>Presentations instantly</p>
+</div>
+
+</div>
+</div>
+
+<div class="section">
+<h2>🧠 My AI System</h2>
+<div class="cards">
+<div class="card"><p>Understand faster using AI</p></div>
+<div class="card"><p>Create notes instantly</p></div>
+<div class="card"><p>Apply learning daily</p></div>
+</div>
+</div>
+
+<div class="section">
+<h2>📈 My Journey</h2>
+<p>Started from zero. Improving daily with consistency and discipline.</p>
+</div>
+
+<div class="section">
+<h2>📩 Contact Me</h2>
+<p>Email: <a href="mailto:your@email.com">padkardhanesh@gmail.com</a></p>
+<p>Let’s connect and grow together 🚀</p>
+</div>
+
+<div class="section">
+<h2>📲 Connect</h2>
+<p>If you found value, follow my journey 👇</p>
+<a href="https://instagram.com/_dhanesh04.unfiltered" class="btn">Follow Me</a>
+</div>
+
+<footer>
+© 2026 Dhanesh ⚡ | Built like a creator
+</footer>
+
+<script>
+const sections = document.querySelectorAll('.section');
+
+window.addEventListener('scroll', () => {
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      sec.classList.add('show');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
