@@ -3,96 +3,61 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dhanesh | AI Builder</title>
+<title>AI Learning Hub | Dhanesh</title>
 
 <style>
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  color: white;
-  background: linear-gradient(270deg, #000, #111, #000);
-  background-size: 600% 600%;
-  animation: bgMove 15s ease infinite;
-}
-
-@keyframes bgMove {
-  0% {background-position: 0% 50%;}
-  50% {background-position: 100% 50%;}
-  100% {background-position: 0% 50%;}
+  background: #0a0a0a;
+  color: #eee;
+  scroll-behavior: smooth;
 }
 
 /* NAVBAR */
 nav {
   position: fixed;
   width: 100%;
-  padding: 15px 40px;
-  display: flex;
-  justify-content: space-between;
-  background: rgba(0,0,0,0.4);
-  backdrop-filter: blur(10px);
-}
-
-nav h2 {
-  margin: 0;
+  background: #000;
+  padding: 15px;
+  text-align: center;
 }
 
 nav a {
+  margin: 0 15px;
   color: #aaa;
-  margin-left: 20px;
   text-decoration: none;
 }
 
 /* HERO */
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 120px 10%;
+header {
   height: 100vh;
-}
-
-.hero-text {
-  max-width: 500px;
-}
-
-.hero-text h1 {
-  font-size: 60px;
-}
-
-.hero-text p {
-  color: #aaa;
-  margin-top: 10px;
-}
-
-.btn {
-  margin-top: 20px;
-  padding: 12px 25px;
-  border: 1px solid white;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.hero-box {
-  width: 350px;
-  height: 350px;
-  border-radius: 20px;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(20px);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+.subtitle {
+  color: #aaa;
 }
 
 /* SECTION */
 .section {
-  padding: 100px 10%;
+  padding: 80px 20px;
+  text-align: center;
 }
 
+/* CARDS */
 .cards {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card {
@@ -103,11 +68,16 @@ nav a {
   border-radius: 10px;
 }
 
+.card a {
+  color: #00ffcc;
+  text-decoration: none;
+}
+
 /* FOOTER */
 footer {
-  text-align: center;
   padding: 40px;
-  color: #777;
+  text-align: center;
+  color: #666;
 }
 </style>
 
@@ -116,69 +86,63 @@ footer {
 <body>
 
 <nav>
-<h2>Dhanesh</h2>
-<div>
-<a href="#">Home</a>
 <a href="#tools">Tools</a>
+<a href="#learn">Learn</a>
+<a href="#roadmap">Roadmap</a>
 <a href="#contact">Contact</a>
-</div>
 </nav>
 
-<div class="hero">
-<div class="hero-text">
-<h1>Build Your Future With AI</h1>
-<p>I’m Dhanesh, learning AI early and building real skills.</p>
-<a href="#tools" class="btn">Explore Tools</a>
-</div>
-
-<div class="hero-box">
-AI Builder ⚡
-</div>
-</div>
-
-<div class="section">
-<h2>What I Do</h2>
-
-<div class="cards">
-<div class="card">Learn AI</div>
-<div class="card">Build Skills</div>
-<div class="card">Grow Daily</div>
-</div>
-
-</div>
+<header>
+<h1>AI Learning Hub ⚡</h1>
+<p class="subtitle">Learn AI, Use Tools, Build Skills</p>
+</header>
 
 <div class="section" id="tools">
-<h2>AI Tools</h2>
+<h2>🔥 Top AI Tools</h2>
 
 <div class="cards">
-<div class="card"><a href="https://chat.openai.com">ChatGPT</a></div>
-<div class="card"><a href="https://canva.com">Canva</a></div>
-<div class="card"><a href="https://notion.so">Notion</a></div>
-</div>
+
+<div class="card"><a href="https://chat.openai.com">ChatGPT</a><p>AI assistant</p></div>
+<div class="card"><a href="https://claude.ai">Claude</a><p>Writing AI</p></div>
+<div class="card"><a href="https://www.perplexity.ai">Perplexity</a><p>AI search</p></div>
+<div class="card"><a href="https://www.canva.com">Canva AI</a><p>Design</p></div>
+<div class="card"><a href="https://gamma.app">Gamma</a><p>Presentations</p></div>
+<div class="card"><a href="https://runwayml.com">Runway</a><p>Video AI</p></div>
+<div class="card"><a href="https://pictory.ai">Pictory</a><p>Video creation</p></div>
+<div class="card"><a href="https://notion.so">Notion AI</a><p>Productivity</p></div>
+<div class="card"><a href="https://tome.app">Tome</a><p>Story AI</p></div>
+<div class="card"><a href="https://soundraw.io">Soundraw</a><p>Music AI</p></div>
 
 </div>
+</div>
 
-<div class="section">
-<h2>Strategy</h2>
+<div class="section" id="learn">
+<h2>📘 Learn AI Fast</h2>
+<p>Start with basics → Use tools → Build projects → Share online</p>
+</div>
+
+<div class="section" id="roadmap">
+<h2>📈 AI Roadmap</h2>
 
 <div class="cards">
-<div class="card">AI Learning Platform</div>
-<div class="card">Beginner Friendly</div>
-<div class="card">High Growth Focus</div>
+<div class="card">Step 1: Understand AI basics</div>
+<div class="card">Step 2: Use AI tools daily</div>
+<div class="card">Step 3: Build projects</div>
+<div class="card">Step 4: Share on Instagram</div>
 </div>
 
 </div>
 
 <div class="section" id="contact">
-<h2>Connect</h2>
+<h2>📩 Contact</h2>
 
-<a href="https://instagram.com/_dhanesh04.unfiltered" class="btn">Instagram</a>
 <p>Email: your@email.com</p>
+<p><a href="https://instagram.com/_dhanesh04.unfiltered">Instagram</a></p>
 
 </div>
 
 <footer>
-© 2026 Dhanesh
+© 2026 AI Hub by Dhanesh
 </footer>
 
 </body>
