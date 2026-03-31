@@ -3,24 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Learning Hub | Dhanesh</title>
+<title>AI Hub | Dhanesh</title>
 
 <style>
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #0a0a0a;
-  color: #eee;
-  scroll-behavior: smooth;
+  color: #fff;
+  background: linear-gradient(135deg, #000, #0a0a0a, #111);
+  overflow-x: hidden;
 }
 
 /* NAV */
 nav {
   position: fixed;
   width: 100%;
-  text-align: center;
   padding: 15px;
-  background: rgba(0,0,0,0.7);
+  text-align: center;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
 }
 
 /* HERO */
@@ -30,21 +31,32 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: radial-gradient(circle, #111, #000);
 }
 
-h1 { font-size: 55px; }
+h1 {
+  font-size: 60px;
+  background: linear-gradient(90deg, #00ffe0, #ff00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 .subtitle {
   color: #aaa;
   max-width: 500px;
+  text-align: center;
 }
 
+/* BUTTON */
 .btn {
   margin-top: 20px;
   padding: 12px 25px;
-  border: 1px solid #fff;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(90deg, #00ffe0, #ff00ff);
+  color: black;
+  font-weight: bold;
   text-decoration: none;
-  color: white;
 }
 
 /* SECTION */
@@ -53,27 +65,50 @@ h1 { font-size: 55px; }
   text-align: center;
 }
 
+/* CARDS */
 .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 1100px;
-  margin: auto;
 }
 
 .card {
-  width: 250px;
+  width: 260px;
   margin: 15px;
   padding: 20px;
-  border: 1px solid #222;
-  border-radius: 10px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 20px rgba(0,255,255,0.3);
+}
+
+.card a {
+  color: #00ffe0;
+  text-decoration: none;
+}
+
+/* FEATURED */
+.feature {
+  margin-top: 50px;
+  padding: 30px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #00ffe0, #ff00ff);
+  color: black;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* FOOTER */
 footer {
   padding: 40px;
   text-align: center;
-  color: #666;
+  color: #777;
 }
 </style>
 
@@ -81,75 +116,51 @@ footer {
 
 <body>
 
-<nav>
-AI Hub by Dhanesh
-</nav>
+<nav>AI Hub by Dhanesh</nav>
 
 <header>
-<h1>Learn AI & Build Your Future ⚡</h1>
-<p class="subtitle">A simple platform to learn AI, use tools, and grow faster.</p>
-<a href="#tools" class="btn">Start Learning</a>
+<h1>Learn AI. Build Future.</h1>
+<p class="subtitle">A powerful AI learning platform for students and creators.</p>
+<a href="#tools" class="btn">Explore Tools</a>
 </header>
 
-<div class="section">
-<h2>🔥 Why This Platform?</h2>
-<p>This platform helps students and beginners learn AI quickly using tools and real guidance.</p>
-</div>
-
 <div class="section" id="tools">
-<h2>⚡ Top 10 AI Tools</h2>
+<h2>⚡ Top AI Tools</h2>
 
 <div class="cards">
 
-<div class="card"><h3>ChatGPT</h3><p>AI assistant for learning, coding, and ideas.</p><a href="https://chat.openai.com">Use →</a></div>
+<div class="card"><h3>ChatGPT</h3><p>Best AI assistant</p><a href="https://chat.openai.com">Use →</a></div>
+<div class="card"><h3>Claude</h3><p>Writing AI</p><a href="https://claude.ai">Use →</a></div>
+<div class="card"><h3>Perplexity</h3><p>AI Search</p><a href="https://perplexity.ai">Use →</a></div>
+<div class="card"><h3>Canva AI</h3><p>Design</p><a href="https://canva.com">Use →</a></div>
+<div class="card"><h3>Gamma</h3><p>Presentation</p><a href="https://gamma.app">Use →</a></div>
+<div class="card"><h3>Runway</h3><p>Video AI</p><a href="https://runwayml.com">Use →</a></div>
+<div class="card"><h3>Pictory</h3><p>Video creation</p><a href="https://pictory.ai">Use →</a></div>
+<div class="card"><h3>Notion AI</h3><p>Productivity</p><a href="https://notion.so">Use →</a></div>
+<div class="card"><h3>Tome</h3><p>Story AI</p><a href="https://tome.app">Use →</a></div>
+<div class="card"><h3>Soundraw</h3><p>Music AI</p><a href="https://soundraw.io">Use →</a></div>
 
-<div class="card"><h3>Claude</h3><p>Best for writing and long explanations.</p><a href="https://claude.ai">Use →</a></div>
+</div>
 
-<div class="card"><h3>Perplexity</h3><p>AI search engine for quick research.</p><a href="https://perplexity.ai">Use →</a></div>
-
-<div class="card"><h3>Canva AI</h3><p>Create posts, designs, and thumbnails.</p><a href="https://canva.com">Use →</a></div>
-
-<div class="card"><h3>Gamma</h3><p>Create presentations instantly.</p><a href="https://gamma.app">Use →</a></div>
-
-<div class="card"><h3>Runway</h3><p>AI video editing and effects.</p><a href="https://runwayml.com">Use →</a></div>
-
-<div class="card"><h3>Pictory</h3><p>Convert text to videos automatically.</p><a href="https://pictory.ai">Use →</a></div>
-
-<div class="card"><h3>Notion AI</h3><p>Organize tasks and notes.</p><a href="https://notion.so">Use →</a></div>
-
-<div class="card"><h3>Tome</h3><p>Create AI-powered stories.</p><a href="https://tome.app">Use →</a></div>
-
-<div class="card"><h3>Soundraw</h3><p>Generate AI music.</p><a href="https://soundraw.io">Use →</a></div>
-
+<div class="feature">
+🔥 Featured Tool: ChatGPT — The most powerful AI tool for learning and growth.
 </div>
 
 </div>
 
 <div class="section">
-<h2>📘 How to Learn AI</h2>
-<p>Understand basics → Use tools → Build projects → Share your work → Grow audience</p>
+<h2>📘 Learn AI</h2>
+<p>Start with basics → Use tools → Build projects → Grow your audience</p>
 </div>
 
 <div class="section">
-<h2>📈 AI Roadmap</h2>
+<h2>📈 Roadmap</h2>
 
 <div class="cards">
-<div class="card">Step 1: Learn AI basics</div>
-<div class="card">Step 2: Use tools daily</div>
-<div class="card">Step 3: Build projects</div>
-<div class="card">Step 4: Share online</div>
-</div>
-
-</div>
-
-<div class="section">
-<h2>📊 Platform Strategy</h2>
-
-<div class="cards">
-<div class="card">Goal: Build AI learning platform</div>
-<div class="card">Audience: Students & beginners</div>
-<div class="card">Focus: Simple + practical learning</div>
-<div class="card">Vision: Make AI easy for all</div>
+<div class="card">Learn Basics</div>
+<div class="card">Use Tools</div>
+<div class="card">Build Projects</div>
+<div class="card">Share Online</div>
 </div>
 
 </div>
