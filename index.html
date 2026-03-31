@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI & Coding Platform</title>
+<title>Dhanesh | AI Builder</title>
 
 <style>
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #0A0A0A;
-  color: #F9FAFB;
+  background: #000;
+  color: #eaeaea;
 }
 
 /* HERO */
@@ -24,31 +24,27 @@ header {
 }
 
 h1 {
-  font-size: 55px;
-  background: linear-gradient(90deg, #7C3AED, #EC4899);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-size: 60px;
+  letter-spacing: 2px;
 }
 
 .subtitle {
-  color: #aaa;
+  color: #888;
   max-width: 500px;
 }
 
-.btn {
-  margin-top: 20px;
-  padding: 12px 25px;
-  background: linear-gradient(90deg, #7C3AED, #EC4899);
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
+/* SECTIONS */
+.section {
+  padding: 100px 20px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.8s;
 }
 
-/* SECTION */
-.section {
-  padding: 80px 20px;
-  text-align: center;
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* CARDS */
@@ -59,25 +55,40 @@ h1 {
 }
 
 .card {
-  background: #111;
   border: 1px solid #222;
   margin: 15px;
-  padding: 20px;
-  border-radius: 12px;
+  padding: 25px;
+  border-radius: 10px;
   width: 260px;
   transition: 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  border-color: #7C3AED;
+  border-color: #aaa;
+  transform: translateY(-5px);
+}
+
+/* BUTTON */
+.btn {
+  margin-top: 20px;
+  padding: 12px 28px;
+  border: 1px solid #aaa;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: white;
+  color: black;
 }
 
 /* FOOTER */
 footer {
+  padding: 40px;
   text-align: center;
-  padding: 30px;
-  color: #777;
+  color: #555;
 }
 </style>
 
@@ -86,46 +97,46 @@ footer {
 <body>
 
 <header>
-<h1>AI Made Simple ⚡</h1>
-<p class="subtitle">Learn AI & coding faster. No experience needed. Start building today.</p>
-<a href="#tools" class="btn">Get Started</a>
+<h1>Dhanesh</h1>
+<p class="subtitle">
+16 • Building with AI • Focused on growth, discipline, and future
+</p>
 </header>
 
 <div class="section">
-<h2>🚀 Why This Platform?</h2>
-<p>We simplify AI so students can learn fast and build real skills.</p>
+<h2>About Me</h2>
+<p>I’m learning AI and building skills early to stay ahead in the future.</p>
 </div>
 
 <div class="section">
-<h2>🔥 What You Get</h2>
+<h2>What I Do</h2>
 
 <div class="cards">
-<div class="card"><p>AI Tools that save time</p></div>
-<div class="card"><p>No-code beginner learning</p></div>
-<div class="card"><p>Real growth strategies</p></div>
-<div class="card"><p>Simple and clean UI</p></div>
+<div class="card"><p>Learn AI daily</p></div>
+<div class="card"><p>Build digital skills</p></div>
+<div class="card"><p>Share my journey</p></div>
 </div>
 
 </div>
 
-<div class="section" id="tools">
-<h2>🤖 AI Tools</h2>
+<div class="section">
+<h2>AI Tools I Use</h2>
 
 <div class="cards">
 
 <div class="card">
 <h3><a href="https://chat.openai.com" target="_blank">ChatGPT</a></h3>
-<p>Learn concepts instantly</p>
+<p>Learning & thinking</p>
 </div>
 
 <div class="card">
-<h3><a href="https://www.canva.com" target="_blank">Canva AI</a></h3>
-<p>Create designs easily</p>
+<h3><a href="https://www.canva.com" target="_blank">Canva</a></h3>
+<p>Design & content</p>
 </div>
 
 <div class="card">
-<h3><a href="https://www.notion.so" target="_blank">Notion AI</a></h3>
-<p>Organize your life</p>
+<h3><a href="https://www.notion.so" target="_blank">Notion</a></h3>
+<p>Planning & focus</p>
 </div>
 
 </div>
@@ -133,18 +144,47 @@ footer {
 </div>
 
 <div class="section">
-<h2>📈 Your Growth Path</h2>
-<p>Start → Learn → Build → Grow 🚀</p>
+<h2>My System</h2>
+
+<div class="cards">
+<div class="card"><p>Learn fast</p></div>
+<div class="card"><p>Apply daily</p></div>
+<div class="card"><p>Stay consistent</p></div>
+</div>
+
 </div>
 
 <div class="section">
-<h2>📩 Contact</h2>
-<p>Email: <a href="mailto:your@email.com">your@email.com</a></p>
+<h2>My Journey</h2>
+<p>Started from zero. Improving every day.</p>
+</div>
+
+<div class="section">
+<h2>Connect</h2>
+
+<p>Instagram:</p>
+<a href="https://instagram.com/_dhanesh04.unfiltered" class="btn">View Instagram</a>
+
+<p style="margin-top:30px;">Email:</p>
+<p>your@email.com</p>
+
 </div>
 
 <footer>
-© 2026 AI Platform | Built for future creators
+© 2026 Dhanesh • Built with focus
 </footer>
+
+<script>
+const sections = document.querySelectorAll('.section');
+
+window.addEventListener('scroll', () => {
+  sections.forEach(sec => {
+    if (sec.getBoundingClientRect().top < window.innerHeight - 100) {
+      sec.classList.add('show');
+    }
+  });
+});
+</script>
 
 </body>
 </html>
