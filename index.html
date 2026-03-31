@@ -9,8 +9,34 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #000;
   color: #eaeaea;
+  overflow-x: hidden;
+  background: radial-gradient(circle at top, #111 0%, #000 80%);
+}
+
+/* Animated background glow */
+body::before {
+  content: "";
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 50%;
+  top: -200px;
+  left: -200px;
+  filter: blur(100px);
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  background: rgba(255,255,255,0.02);
+  border-radius: 50%;
+  bottom: -200px;
+  right: -200px;
+  filter: blur(100px);
 }
 
 /* HERO */
@@ -25,20 +51,26 @@ header {
 
 h1 {
   font-size: 70px;
-  letter-spacing: 2px;
 }
 
-.tagline {
+#typing {
   margin-top: 10px;
-  font-size: 20px;
   color: #aaa;
+  font-size: 18px;
 }
 
-.signature {
-  margin-top: 20px;
-  font-size: 16px;
+/* Scroll indicator */
+.scroll {
+  position: absolute;
+  bottom: 30px;
+  font-size: 14px;
   color: #666;
-  font-style: italic;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {transform: translateY(0);}
+  50% {transform: translateY(10px);}
 }
 
 /* SECTION */
@@ -55,7 +87,7 @@ h1 {
   transform: translateY(0);
 }
 
-/* CARDS */
+/* GLASS CARDS */
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -63,7 +95,9 @@ h1 {
 }
 
 .card {
-  border: 1px solid #222;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
   margin: 15px;
   padding: 25px;
   border-radius: 12px;
@@ -72,7 +106,6 @@ h1 {
 }
 
 .card:hover {
-  border-color: #888;
   transform: translateY(-6px);
   box-shadow: 0 0 20px rgba(255,255,255,0.05);
 }
@@ -107,28 +140,28 @@ footer {
 
 <header>
 <h1>Dhanesh</h1>
-<p class="tagline">16 • AI • Discipline • Growth</p>
-<p class="signature">"I don’t follow the future. I build it."</p>
+<p id="typing"></p>
+<div class="scroll">scroll ↓</div>
 </header>
 
 <div class="section">
 <h2>Who I Am</h2>
-<p>I’m building skills in AI early to stay ahead and create a powerful future.</p>
+<p>I’m building AI skills early to create a powerful future.</p>
 </div>
 
 <div class="section">
-<h2>What I Focus On</h2>
+<h2>What I Do</h2>
 
 <div class="cards">
-<div class="card"><p>Artificial Intelligence</p></div>
-<div class="card"><p>Digital Skills</p></div>
-<div class="card"><p>Self Growth</p></div>
+<div class="card"><p>Learn AI daily</p></div>
+<div class="card"><p>Build digital skills</p></div>
+<div class="card"><p>Document growth</p></div>
 </div>
 
 </div>
 
 <div class="section">
-<h2>Tools I Use</h2>
+<h2>AI Tools</h2>
 
 <div class="cards">
 
@@ -176,8 +209,20 @@ footer {
 </footer>
 
 <script>
-const sections = document.querySelectorAll('.section');
+// Typing effect
+const text = "16 • AI • Discipline • Growth";
+let i = 0;
+function typing() {
+  if (i < text.length) {
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typing, 40);
+  }
+}
+typing();
 
+// Scroll animation
+const sections = document.querySelectorAll('.section');
 window.addEventListener('scroll', () => {
   sections.forEach(sec => {
     if (sec.getBoundingClientRect().top < window.innerHeight - 100) {
