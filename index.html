@@ -11,7 +11,6 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background: #000;
   color: #eaeaea;
-  overflow-x: hidden;
 }
 
 /* HERO */
@@ -25,14 +24,21 @@ header {
 }
 
 h1 {
-  font-size: 65px;
+  font-size: 70px;
   letter-spacing: 2px;
 }
 
-#typing {
-  color: #aaa;
-  font-size: 18px;
+.tagline {
   margin-top: 10px;
+  font-size: 20px;
+  color: #aaa;
+}
+
+.signature {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #666;
+  font-style: italic;
 }
 
 /* SECTION */
@@ -101,33 +107,34 @@ footer {
 
 <header>
 <h1>Dhanesh</h1>
-<p id="typing"></p>
+<p class="tagline">16 • AI • Discipline • Growth</p>
+<p class="signature">"I don’t follow the future. I build it."</p>
 </header>
 
 <div class="section">
-<h2>About</h2>
-<p>I’m building skills in AI early to stay ahead in the future.</p>
+<h2>Who I Am</h2>
+<p>I’m building skills in AI early to stay ahead and create a powerful future.</p>
 </div>
 
 <div class="section">
-<h2>What I Do</h2>
+<h2>What I Focus On</h2>
 
 <div class="cards">
-<div class="card"><p>Learn AI daily</p></div>
-<div class="card"><p>Build digital skills</p></div>
-<div class="card"><p>Document my growth</p></div>
+<div class="card"><p>Artificial Intelligence</p></div>
+<div class="card"><p>Digital Skills</p></div>
+<div class="card"><p>Self Growth</p></div>
 </div>
 
 </div>
 
 <div class="section">
-<h2>AI Tools</h2>
+<h2>Tools I Use</h2>
 
 <div class="cards">
 
 <div class="card">
 <h3><a href="https://chat.openai.com" target="_blank">ChatGPT</a></h3>
-<p>Learning & problem solving</p>
+<p>Learning & thinking</p>
 </div>
 
 <div class="card">
@@ -137,7 +144,7 @@ footer {
 
 <div class="card">
 <h3><a href="https://www.notion.so" target="_blank">Notion</a></h3>
-<p>Planning & productivity</p>
+<p>Planning & execution</p>
 </div>
 
 </div>
@@ -145,12 +152,12 @@ footer {
 </div>
 
 <div class="section">
-<h2>System</h2>
+<h2>My System</h2>
 
 <div class="cards">
-<div class="card"><p>Learn fast</p></div>
-<div class="card"><p>Apply daily</p></div>
-<div class="card"><p>Stay consistent</p></div>
+<div class="card"><p>Learn Fast</p></div>
+<div class="card"><p>Take Action</p></div>
+<div class="card"><p>Stay Consistent</p></div>
 </div>
 
 </div>
@@ -165,23 +172,10 @@ footer {
 </div>
 
 <footer>
-© 2026 Dhanesh • Built with focus
+© 2026 Dhanesh
 </footer>
 
 <script>
-// Typing animation
-const text = "16 • Learning AI • Building my future";
-let i = 0;
-function typing() {
-  if (i < text.length) {
-    document.getElementById("typing").innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typing, 40);
-  }
-}
-typing();
-
-// Scroll animation
 const sections = document.querySelectorAll('.section');
 
 window.addEventListener('scroll', () => {
