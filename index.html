@@ -9,66 +9,37 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  color: white;
-  scroll-behavior: smooth;
-  background: linear-gradient(-45deg, #0d0d0d, #001f3f, #003366, #0d0d0d);
-  background-size: 400% 400%;
-  animation: bgAnimation 10s ease infinite;
-}
-
-@keyframes bgAnimation {
-  0% {background-position: 0% 50%;}
-  50% {background-position: 100% 50%;}
-  100% {background-position: 0% 50%;}
-}
-
-/* Navbar */
-nav {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  background: rgba(0,0,0,0.5);
-  backdrop-filter: blur(10px);
-  padding: 10px;
+  background: #000;
+  color: #eaeaea;
   text-align: center;
 }
 
-nav a {
-  margin: 0 15px;
-  color: #00ffcc;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* Header */
+/* Hero */
 header {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
 
 h1 {
-  font-size: 60px;
-  background: linear-gradient(90deg, #00ffcc, #00aaff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-size: 55px;
+  letter-spacing: 2px;
 }
 
 .subtitle {
-  color: #ccc;
+  color: #888;
   max-width: 500px;
+  margin-top: 10px;
 }
 
 /* Sections */
 .section {
-  padding: 100px 20px;
-  text-align: center;
+  padding: 80px 20px;
   opacity: 0;
-  transform: translateY(40px);
-  transition: 1s;
+  transform: translateY(30px);
+  transition: 0.8s;
 }
 
 .section.show {
@@ -84,36 +55,45 @@ h1 {
 }
 
 .card {
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
+  border: 1px solid #222;
   margin: 15px;
   padding: 20px;
-  border-radius: 15px;
-  width: 280px;
+  border-radius: 12px;
+  width: 260px;
   transition: 0.3s;
 }
 
 .card:hover {
-  transform: scale(1.05);
-  background: rgba(255,255,255,0.1);
+  border-color: #888;
+  transform: translateY(-5px);
 }
 
 /* Buttons */
 .btn {
   margin-top: 20px;
   padding: 12px 25px;
-  background: linear-gradient(90deg, #00ffcc, #00aaff);
+  border: 1px solid #888;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: white;
   color: black;
-  border-radius: 8px;
-  font-weight: bold;
+}
+
+/* Links */
+a {
+  color: #ccc;
   text-decoration: none;
 }
 
 /* Footer */
 footer {
-  text-align: center;
   padding: 30px;
-  color: #aaa;
+  color: #555;
 }
 </style>
 
@@ -121,71 +101,64 @@ footer {
 
 <body>
 
-<nav>
-<a href="#">Home</a>
-<a href="#tools">AI Tools</a>
-<a href="#journey">Journey</a>
-<a href="#contact">Contact</a>
-</nav>
-
 <header>
-<h1>Dhanesh ⚡</h1>
-<p class="subtitle">16 | Learning AI and building a powerful future</p>
+<h1>Dhanesh</h1>
+<p class="subtitle">16 • Building with AI • Focused on growth</p>
 </header>
 
 <div class="section">
-<h2>⚡ My Mission</h2>
-<p>To master AI early and build skills that matter in the future.</p>
+<h2>About</h2>
+<p>I’m learning AI and building skills to stay ahead in the future.</p>
 </div>
 
-<div class="section" id="tools">
-<h2>🤖 AI Tools I Use</h2>
+<div class="section">
+<h2>AI Tools</h2>
 
 <div class="cards">
 
 <div class="card">
 <h3><a href="https://chat.openai.com" target="_blank">ChatGPT</a></h3>
-<p>Learning and problem solving</p>
+<p>Learning & thinking</p>
 </div>
 
 <div class="card">
-<h3><a href="https://www.canva.com" target="_blank">Canva AI</a></h3>
-<p>Design and content creation</p>
+<h3><a href="https://www.canva.com" target="_blank">Canva</a></h3>
+<p>Design & content</p>
 </div>
 
 <div class="card">
-<h3><a href="https://www.notion.so" target="_blank">Notion AI</a></h3>
-<p>Planning and productivity</p>
+<h3><a href="https://www.notion.so" target="_blank">Notion</a></h3>
+<p>Planning & focus</p>
 </div>
 
 </div>
 </div>
 
 <div class="section">
-<h2>🧠 My AI System</h2>
+<h2>System</h2>
 
 <div class="cards">
-<div class="card"><p>Understand faster</p></div>
-<div class="card"><p>Create notes instantly</p></div>
-<div class="card"><p>Apply learning daily</p></div>
+<div class="card"><p>Learn fast</p></div>
+<div class="card"><p>Take action</p></div>
+<div class="card"><p>Stay consistent</p></div>
 </div>
 
 </div>
 
-<div class="section" id="journey">
-<h2>📈 My Journey</h2>
-<p>Started from zero. Growing daily with discipline and consistency.</p>
+<div class="section">
+<h2>Journey</h2>
+<p>Starting from zero. Improving daily.</p>
 </div>
 
-<div class="section" id="contact">
-<h2>📩 Contact Me</h2>
+<div class="section">
+<h2>Contact</h2>
 <p>Email: <a href="mailto:your@email.com">your@email.com</a></p>
 
-<a href="https://instagram.com/_dhanesh04.unfiltered" class="btn">Follow Me</a>
+<a href="https://instagram.com/_dhanesh04.unfiltered" class="btn">Follow Journey</a>
 </div>
 
 <footer>
-© 2026 Dhanesh ⚡ | Built like a pro
+© 2026 Dhanesh
 </footer>
 
 <script>
@@ -193,8 +166,7 @@ const sections = document.querySelectorAll('.section');
 
 window.addEventListener('scroll', () => {
   sections.forEach(sec => {
-    const top = sec.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
+    if (sec.getBoundingClientRect().top < window.innerHeight - 100) {
       sec.classList.add('show');
     }
   });
