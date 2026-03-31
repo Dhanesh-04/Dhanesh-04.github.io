@@ -6,12 +6,24 @@
 <title>AI Hub | Dhanesh</title>
 
 <style>
+
+/* BODY WITH ANIMATED BACKGROUND */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   color: #fff;
-  background: linear-gradient(135deg, #000, #0a0a0a, #111);
+
+  background: linear-gradient(-45deg, #000, #111, #0a0a0a, #111);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+
   overflow-x: hidden;
+}
+
+@keyframes gradientMove {
+  0% {background-position: 0%}
+  50% {background-position: 100%}
+  100% {background-position: 0%}
 }
 
 /* NAV */
@@ -31,15 +43,10 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: radial-gradient(circle, #111, #000);
 }
 
-h1 {
-  font-size: 60px;
-  background: linear-gradient(90deg, #00ffe0, #ff00ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+/* TEXT */
+h1 { font-size: 55px; }
 
 .subtitle {
   color: #aaa;
@@ -51,12 +58,9 @@ h1 {
 .btn {
   margin-top: 20px;
   padding: 12px 25px;
-  border-radius: 25px;
-  border: none;
-  background: linear-gradient(90deg, #00ffe0, #ff00ff);
-  color: black;
-  font-weight: bold;
+  border: 1px solid #fff;
   text-decoration: none;
+  color: white;
 }
 
 /* SECTION */
@@ -66,7 +70,7 @@ h1 {
   border-bottom: 1px solid #111;
 }
 
-/* CARDS */
+/* CARDS (UPGRADED) */
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -79,12 +83,17 @@ h1 {
   padding: 25px;
   border-radius: 15px;
   border: 1px solid #222;
-  transition: 0.3s;
+
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+
+  transition: all 0.4s ease;
 }
 
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 20px rgba(0,255,255,0.3);
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 0 25px rgba(0,255,255,0.4);
+  border-color: #00ffe0;
 }
 
 .card a {
@@ -92,12 +101,12 @@ h1 {
   text-decoration: none;
 }
 
-/* FEATURED */
+/* FEATURE BOX */
 .feature {
   margin-top: 50px;
   padding: 30px;
   border-radius: 20px;
-  background: linear-gradient(90deg, #00ffe0, #ff00ff);
+  background: linear-gradient(90deg,#00ffe0,#ff00ff);
   color: black;
   max-width: 600px;
   margin-left: auto;
@@ -110,8 +119,8 @@ footer {
   text-align: center;
   color: #777;
 }
-</style>
 
+</style>
 </head>
 
 <body>
@@ -119,146 +128,68 @@ footer {
 <nav>AI Hub by Dhanesh</nav>
 
 <header>
-<h1 style="font-size:60px;">
-Master AI & Build Your Future 🚀
-</h1>
-
-<p style="color:#aaa;max-width:600px;">
-Learn AI tools, build skills, and grow faster than 99% students.
-</p>
-
-<p style="color:#00ffe0;">
-100+ Tools • Beginner Friendly • Free
-</p>
+<h1>Master AI & Build Your Future 🚀</h1>
+<p class="subtitle">Learn AI tools, build skills, and grow faster than 99% students.</p>
+<p style="color:#00ffe0;">100+ Tools • Beginner Friendly • Free</p>
+<a href="#tools" class="btn">Start Learning</a>
 </header>
-  <div class="section">
+
+<div class="section">
 <h2>🔥 Why This Platform?</h2>
 <p>This platform helps students learn AI fast using practical tools and simple methods.</p>
 </div>
 
+<!-- TOOLS SECTION -->
 <div class="section" id="tools">
 
-<h2 style="font-size:42px;">⚡ AI Tools Directory</h2>
-<p style="color:#aaa;">Explore the best AI tools by category and start building smarter.</p>
-  <h3 style="color:#00ffe0;">↓ Keep Exploring ↓</h3>
+<h2>⚡ AI Tools Directory</h2>
+<p style="color:#aaa;">Explore the best AI tools by category</p>
 
-<!-- FEATURED TOOL -->
-<div style="
-max-width:700px;
-margin:50px auto;
-padding:35px;
-border-radius:20px;
-background:linear-gradient(90deg,#00ffe0,#ff00ff);
-color:black;
-text-align:center;
-">
-<h2>🔥 Featured Tool</h2>
-<h3 style="font-size:28px;">ChatGPT</h3>
-<p>The most powerful AI tool for learning, building, and solving problems.</p>
-<a href="https://chat.openai.com" target="_blank" style="color:black;font-weight:bold;">Start Now →</a>
+<div class="feature">
+🔥 Featured Tool: ChatGPT — Best for learning, coding, and ideas.
 </div>
 
-<!-- CATEGORY 1 -->
-<h3 style="margin-top:60px;">📚 Learning & Research</h3>
+<h3 style="margin-top:60px;">📚 Learning</h3>
 <div class="cards">
-
-<div class="card">
-<div class="card" style="border:2px solid #00ffe0;">
-<h3>🔥 ChatGPT (Start Here)</h3>
-<p>Best tool for beginners to learn AI fast.</p>
-<a href="https://chat.openai.com">Explore →</a>
+<div class="card"><h4>ChatGPT</h4><p>AI assistant</p><a href="https://chat.openai.com">Explore →</a></div>
+<div class="card"><h4>Claude</h4><p>Writing AI</p><a href="https://claude.ai">Explore →</a></div>
+<div class="card"><h4>Perplexity</h4><p>AI search</p><a href="https://perplexity.ai">Explore →</a></div>
 </div>
 
-<div class="card">
-<h4>Claude</h4>
-<p>Best for deep explanations and writing.</p>
-<a href="https://claude.ai">Explore →</a>
-</div>
-
-<div class="card">
-<h4>Perplexity</h4>
-<p>Smart AI search engine.</p>
-<a href="https://perplexity.ai">Explore →</a>
-</div>
-
-</div>
-
-<!-- CATEGORY 2 -->
-<h3 style="margin-top:50px;">🎨 Design & Creativity</h3>
+<h3 style="margin-top:50px;">🎨 Design</h3>
 <div class="cards">
-
-<div class="card">
-<h4>Canva AI</h4>
-<p>Create designs and posts easily.</p>
-<a href="https://canva.com">Explore →</a>
+<div class="card"><h4>Canva AI</h4><p>Design tool</p><a href="https://canva.com">Explore →</a></div>
+<div class="card"><h4>Gamma</h4><p>Presentations</p><a href="https://gamma.app">Explore →</a></div>
+<div class="card"><h4>Tome</h4><p>Story AI</p><a href="https://tome.app">Explore →</a></div>
 </div>
 
-<div class="card">
-<h4>Gamma</h4>
-<p>Make presentations instantly.</p>
-<a href="https://gamma.app">Explore →</a>
-</div>
-
-<div class="card">
-<h4>Tome</h4>
-<p>Create AI-powered storytelling content.</p>
-<a href="https://tome.app">Explore →</a>
-</div>
-
-</div>
-
-<!-- CATEGORY 3 -->
-<h3 style="margin-top:50px;">🎬 Video Tools</h3>
+<h3 style="margin-top:50px;">🎬 Video</h3>
 <div class="cards">
-
-<div class="card">
-<h4>Runway</h4>
-<p>AI video editing and effects.</p>
-<a href="https://runwayml.com">Explore →</a>
+<div class="card"><h4>Runway</h4><p>Video AI</p><a href="https://runwayml.com">Explore →</a></div>
+<div class="card"><h4>Pictory</h4><p>Video creation</p><a href="https://pictory.ai">Explore →</a></div>
 </div>
 
-<div class="card">
-<h4>Pictory</h4>
-<p>Convert text into video content.</p>
-<a href="https://pictory.ai">Explore →</a>
-</div>
-
-</div>
-
-<!-- CATEGORY 4 -->
 <h3 style="margin-top:50px;">⚙️ Productivity</h3>
 <div class="cards">
-
-<div class="card">
-<h4>Notion AI</h4>
-<p>Organize tasks and notes smartly.</p>
-<a href="https://notion.so">Explore →</a>
-</div>
-
-<div class="card">
-<h4>Soundraw</h4>
-<p>Create AI music easily.</p>
-<a href="https://soundraw.io">Explore →</a>
+<div class="card"><h4>Notion AI</h4><p>Organize work</p><a href="https://notion.so">Explore →</a></div>
+<div class="card"><h4>Soundraw</h4><p>AI music</p><a href="https://soundraw.io">Explore →</a></div>
 </div>
 
 </div>
 
-</div>
 <div class="section">
-<h2>📘 Learn AI</h2>
-<p>Start with basics → Use tools → Build projects → Grow your audience</p>
+<h2>📘 How to Use AI</h2>
+<p>Learn basics → Use tools → Build projects → Share → Grow</p>
 </div>
 
 <div class="section">
 <h2>📈 Roadmap</h2>
-
 <div class="cards">
 <div class="card">Learn Basics</div>
 <div class="card">Use Tools</div>
 <div class="card">Build Projects</div>
 <div class="card">Share Online</div>
 </div>
-
 </div>
 
 <div class="section">
@@ -271,6 +202,29 @@ text-align:center;
 <footer>
 © 2026 Dhanesh AI Hub
 </footer>
+
+<!-- MOUSE GLOW EFFECT -->
+<div id="cursor"></div>
+
+<style>
+#cursor {
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(0,255,255,0.15), transparent);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+</style>
+
+<script>
+document.addEventListener("mousemove", e => {
+  const cursor = document.getElementById("cursor");
+  cursor.style.left = e.clientX + "px";
+  cursor.style.top = e.clientY + "px";
+});
+</script>
 
 </body>
 </html>
